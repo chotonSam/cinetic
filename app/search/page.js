@@ -16,9 +16,7 @@ export default function SearchPage() {
   useEffect(() => {
     if (query) {
       const fetchData = async () => {
-        const data = await fetchMovies(
-          `http://localhost:3000/api/movies/search?name=${query}`
-        );
+        const data = await fetchMovies(`/api/movies/search?name=${query}`);
         setSearchData(data.results);
       };
       fetchData();

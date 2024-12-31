@@ -3,15 +3,9 @@ import MovieList from "@/components/landing/MovieList";
 import { fetchMovies } from "@/utils/fetchMovies";
 
 export default async function Home() {
-  const populerData = await fetchMovies(
-    `${process.env.API_BASE_URL}/api/movies/populer`
-  );
-  const trendingData = await fetchMovies(
-    `${process.env.API_BASE_URL}/api/movies/trending`
-  );
-  const topratedData = await fetchMovies(
-    `${process.env.API_BASE_URL}/api/movies/toprated`
-  );
+  const populerData = await fetchMovies(`/api/movies/populer`);
+  const trendingData = await fetchMovies(`/api/movies/trending`);
+  const topratedData = await fetchMovies(`/api/movies/toprated`);
 
   return (
     <>

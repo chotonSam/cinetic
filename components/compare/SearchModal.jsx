@@ -15,7 +15,7 @@ export default function SearchModal({
     if (searchValue) {
       const fetchData = async () => {
         const data = await fetchMovies(
-          `http://localhost:3000/api/movies/search?name=${searchValue}`
+          `/api/movies/search?name=${searchValue}`
         );
         setSearchData(data.results);
       };
