@@ -1,6 +1,6 @@
 "use client";
 
-import AddMovieButton from "@/components/compare/addMovieButton";
+import AddMovieButton from "@/components/compare/AddMovieButton";
 import CompireCard from "@/components/compare/CompireCard";
 import SearchModal from "@/components/compare/SearchModal";
 import { useState } from "react";

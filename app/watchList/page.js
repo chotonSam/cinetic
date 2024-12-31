@@ -3,7 +3,7 @@
 import { deleteWatch, fetchWatchList } from "@/actions";
 import LoadingComponent from "@/components/LoadingComponent";
 import Empty from "@/components/watchList/Empty";
-import WatchCard from "@/components/watchList/watchCard";
+import WatchCard from "@/components/watchList/WatchCard";
 import { useAuth } from "@/hooks/useAuth";
 
 import { useRouter } from "next/navigation";
