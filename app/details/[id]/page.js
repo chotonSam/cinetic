@@ -9,13 +9,19 @@ const MovieList = dynamic(() => import("@/components/landing/MovieList"), {
 
 export default async function DetailsPage({ params: { id } }) {
   // movie details fetching
-  const movieResponse = await fetch(`/api/movie/${id}`);
+  const movieResponse = await fetch(
+    `${process.env.API_BASE_URL}/api/movie/${id}`
+  );
   const movieData = await movieResponse.json();
 
   // similer movie fetching
-  const similerMovies = await fetchMovies(`/api/movie/${id}/similer`);
+  const similerMovies = await fetchMovies(
+    `${process.env.API_BASE_URL}/api/movie/${id}/similer`
+  );
 
-  const castResponse = await fetch(`/api/movie/${id}/credits`);
+  const castResponse = await fetch(
+    `${process.env.API_BASE_URL}/api/movie/${id}/credits`
+  );
   const castData = await castResponse.json();
 
   return (
