@@ -1,0 +1,42 @@
+[
+  {
+    "_id": {
+      "$oid": "661e2720e4ffc982667a3f00"
+    },
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "password": "password",
+    "agreement": true
+  },
+  {
+    "_id": {
+      "$oid": "661e2720e4ffc982667a3f01"
+    },
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "janesmith@example.com",
+    "password": "12345678",
+    "agreement": true
+  },
+  {
+    "_id": {
+      "$oid": "661e2720e4ffc982667a3f02"
+    },
+    "firstName": "Robert",
+    "lastName": "Brown",
+    "email": "robertbrown@example.com",
+    "password": "abcdefgh",
+    "agreement": true
+  },
+  {
+    "_id": {
+      "$oid": "661e2720e4ffc982667a3f03"
+    },
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "email": "emilydavis@example.com",
+    "password": "87654321",
+    "agreement": true
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "_id": {
+      "$oid": "661e2720e4ffc982667a3f10"
+    },
+    "title": "Inception",
+    "poster": "https://example.com/inception-poster.jpg",
+    "releaseYear": 2010,
+    "movieId": "mov12345",
+    "user": {
+      "$oid": "661e2720e4ffc982667a3f00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "661e2720e4ffc982667a3f11"
+    },
+    "title": "The Dark Knight",
+    "poster": "https://example.com/dark-knight-poster.jpg",
+    "releaseYear": 2008,
+    "movieId": "mov12346",
+    "user": {
+      "$oid": "661e2720e4ffc982667a3f01"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "661e2720e4ffc982667a3f12"
+    },
+    "title": "Interstellar",
+    "poster": "https://example.com/interstellar-poster.jpg",
+    "releaseYear": 2014,
+    "movieId": "mov12347",
+    "user": {
+      "$oid": "661e2720e4ffc982667a3f02"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "661e2720e4ffc982667a3f13"
+    },
+    "title": "The Matrix",
+    "poster": "https://example.com/matrix-poster.jpg",
+    "releaseYear": 1999,
+    "movieId": "mov12348",
+    "user": {
+      "$oid": "661e2720e4ffc982667a3f03"
+    }
+  }
+]
