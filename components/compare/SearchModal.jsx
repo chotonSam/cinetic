@@ -15,7 +15,7 @@ export default function SearchModal({
     if (searchValue) {
       const fetchData = async () => {
         const data = await fetchMovies(
-          `https://cinetic-db.netlify.app/api/movies/search?name=${searchValue}`
+          `/api/movies/search?name=${searchValue}`
         );
         setSearchData(data.results);
       };

@@ -1,8 +1,11 @@
 const { fetchMovies } = require("@/utils/fetchMovies");
 
 export default async function Hero() {
+  if (!process.env.NEXT_PUBLIC_BASE_URL) {
+    return null;
+  }
   const trendingData = await fetchMovies(
-    `${process.env.API_BASE_URL}/api/movies/populer`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/populer`
   );
 
   const firstMovie = trendingData.results[0];

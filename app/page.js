@@ -3,14 +3,17 @@ import MovieList from "@/components/landing/MovieList";
 import { fetchMovies } from "@/utils/fetchMovies";
 
 export default async function Home() {
+  if (!process.env.NEXT_PUBLIC_BASE_URL) {
+    return null;
+  }
   const populerData = await fetchMovies(
-    `${process.env.API_BASE_URL}/api/movies/populer`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/populer`
   );
   const trendingData = await fetchMovies(
-    `${process.env.API_BASE_URL}/api/movies/trending`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/trending`
   );
   const topratedData = await fetchMovies(
-    `${process.env.API_BASE_URL}/api/movies/toprated`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/toprated`
   );
 
   return (

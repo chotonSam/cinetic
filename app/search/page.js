@@ -16,9 +16,7 @@ export default function SearchPage() {
   useEffect(() => {
     if (query) {
       const fetchData = async () => {
-        const data = await fetchMovies(
-          `https://cinetic-db.netlify.app/api/movies/search?name=${query}`
-        );
+        const data = await fetchMovies(`/api/movies/search?name=${query}`);
         setSearchData(data.results);
       };
       fetchData();
