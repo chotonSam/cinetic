@@ -4,17 +4,26 @@ import { fetchMovies } from "@/utils/fetchMovies";
 
 export default async function Home() {
   if (!process.env.NEXT_PUBLIC_BASE_URL) {
-    return null;
+    console.error("NEXT_PUBLIC_BASE_URL is not set.");
+    return <p>Configuration error. Please set NEXT_PUBLIC_BASE_URL.</p>;
   }
-  const populerData = await fetchMovies(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/populer`
-  );
-  const trendingData = await fetchMovies(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/trending`
-  );
-  const topratedData = await fetchMovies(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/toprated`
-  );
+
+  let populerData, trendingData, topratedData;
+
+  try {
+    populerData = await fetchMovies(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/populer`
+    );
+    trendingData = await fetchMovies(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/trending`
+    );
+    topratedData = await fetchMovies(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/toprated`
+    );
+  } catch (error) {
+    console.error("Error fetching movie data:", error);
+    return <p>Failed to load movie data. Please try again later.</p>;
+  }
 
   return (
     <>
