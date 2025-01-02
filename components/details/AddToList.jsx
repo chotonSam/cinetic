@@ -36,11 +36,11 @@ export default function AddToList({ movie }) {
   }
 
   return (
-    <div class="mb-6">
-      <div class="flex flex-wrap gap-4">
+    <div className="mb-6">
+      <div className="flex flex-wrap gap-4">
         {added ? (
-          <div class="text-center">
-            <button class="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg text-green-600">
+          <div className="text-center">
+            <button className="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg text-green-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -48,10 +48,10 @@ export default function AddToList({ movie }) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-checks"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-checks"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M7 12l5 5l10 -10" />
@@ -61,14 +61,14 @@ export default function AddToList({ movie }) {
             </button>
           </div>
         ) : (
-          <div class="text-center">
+          <div className="text-center">
             <button
               onClick={() =>
                 startTransition(() => {
                   addWatchHandler(movie);
                 })
               }
-              class="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg"
+              className="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,10 +77,10 @@ export default function AddToList({ movie }) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-file-plus"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-file-plus"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />

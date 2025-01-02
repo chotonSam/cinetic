@@ -31,7 +31,7 @@ export default async function DetailsPage({ params: { id } }) {
     <>
       <VideoDetails movie={movieData} casts={castData.cast} />
 
-      <div class="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8">
         <MovieList movies={similerMovies.results} title={"More Like This"} />
       </div>
     </>
