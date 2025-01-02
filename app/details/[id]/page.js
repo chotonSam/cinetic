@@ -8,6 +8,10 @@ const MovieList = dynamic(() => import("@/components/landing/MovieList"), {
 });
 
 export default async function DetailsPage({ params: { id } }) {
+  if (!id) {
+    return 0;
+  }
+
   if (!process.env.NEXT_PUBLIC_BASE_URL) {
     return null;
   }
