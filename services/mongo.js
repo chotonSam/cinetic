@@ -7,17 +7,11 @@ export const dbConnect = async () => {
   }
 
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      serverSelectionTimeoutMS: 60000, // Timeout increased to 60 seconds
-      connectTimeoutMS: 60000,
-      socketTimeoutMS: 60000,
-      bufferCommands: false,
-    });
+    await mongoose.connect(process.env.MONGO_URI, {});
     console.log("MongoDB connected successfully");
   } catch (err) {
     console.error("MongoDB connection error:", err.message);
     console.log("Retrying connection in 5 seconds...");
-    setTimeout(dbConnect, 5000); // Retry after 5 seconds
   }
 };
 
