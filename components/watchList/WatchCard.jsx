@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function WatchCard({ movie, onRemove }) {
   return (
-    <div className="bg-moviedb-black rounded-lg overflow-hidden shadow-lg group relative">
+    <div className="bg-moviedb-black rounded-lg overflow-hidden shadow-lg group relative ">
       <Image
         src={`https://image.tmdb.org/t/p/original${movie.poster}`}
         alt="Armor"
-        className="w-full h-[450px] object-cover cursor-pointer"
+        className="w-full max-h-[450px] object-cover cursor-pointer"
         width={250}
         height={450}
       />
@@ -17,7 +17,9 @@ export default function WatchCard({ movie, onRemove }) {
           className="cursor-pointer hover:underline"
           href={`details/${movie.movieId}`}
         >
-          <h2 className="text-xl font-bold text-light mb-2">{movie.title}</h2>
+          <h2 className="md:text-xl text-lg font-bold text-light mb-2">
+            {movie.title}
+          </h2>
         </Link>
         <div className="flex justify-between items-center">
           <span className="text-primary">{movie.releaseYear.slice(0, 4)}</span>

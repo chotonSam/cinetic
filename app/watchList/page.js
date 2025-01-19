@@ -55,11 +55,13 @@ export default function WatchPage() {
   }
 
   return (
-    <div className="container mx-auto pt-24 pb-8">
+    <div className="container mx-auto md:pt-24 pt-32 pb-8">
       {watchList.length > 0 ? (
         <>
           <header className="mb-8">
-            <h1 className="text-4xl font-bold text-white">Watch Later</h1>
+            <h1 className="md:text-4xl text-3xl font-bold text-white">
+              Watch Later
+            </h1>
             <p className="text-light/70 mt-2">
               Movies you&apos;ve saved to watch in the future
             </p>
@@ -67,7 +69,7 @@ export default function WatchPage() {
 
           <div
             id="watchLaterList"
-            className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {watchList.map((movie) => (
               <WatchCard key={movie.id} movie={movie} onRemove={onRemove} />

@@ -31,7 +31,7 @@ export default function CompireCard({ single, onClose, openModal }) {
   const empty = Object.keys(single).length > 1;
 
   const CardJSX = empty ? (
-    <div className="bg-zinc-900 rounded-lg p-4 flex flex-col">
+    <div className="bg-zinc-900 rounded-lg p-4 flex flex-col md:text-base text-sm">
       <div className="flex justify-end mb-4">
         <button onClick={onClose} className="text-gray-400 hover:text-white">
           ✕
@@ -89,7 +89,7 @@ export default function CompireCard({ single, onClose, openModal }) {
               ))}
             </div>
           </div>
-          <div className="bg-zinc-800 p-3 rounded">
+          <div className="bg-zinc-800 p-3 rounded md:block hidden ">
             <h2 className="text-xl font-bold">Overview</h2>
             <span className="text-sm">{single.overview}</span>
           </div>

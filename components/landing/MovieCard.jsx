@@ -6,7 +6,7 @@ export default function MovieCard({ movie }) {
     ? movie.release_date.slice(0, 4)
     : "N/A";
   return (
-    <div className="flex-shrink-0 w-48 cursor-pointer hover:scale-105 transition-transform">
+    <div className="flex-shrink-0 md:w-48 w-28 cursor-pointer hover:scale-105 transition-transform">
       <Link href={`/details/${movie.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

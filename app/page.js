@@ -21,7 +21,7 @@ export default async function Home() {
       <Hero />
 
       <div className="container mx-auto px-4 py-8">
-        <MovieList movies={populerData.results} title={"Popular on MOVIE DB"} />
+        <MovieList movies={populerData.results} title={"Popular on CINETIC"} />
         <MovieList movies={trendingData.results} title={"Trending Now "} />
         <MovieList movies={topratedData.results} title={"Top Rated"} />
       </div>

@@ -32,7 +32,7 @@ export default function Share() {
             width={32}
             height={32}
           />
-          <p className="text-sm">Facebook</p>
+          <p className=" md:text-sm text-xs">Facebook</p>
         </FacebookShareButton>
 
         {/* Twitter (X) Share Button */}
@@ -48,7 +48,7 @@ export default function Share() {
             width={32}
             height={32}
           />
-          <p className="text-sm">X</p>
+          <p className=" md:text-sm text-xs">X</p>
         </TwitterShareButton>
 
         {/* LinkedIn Share Button */}
@@ -63,7 +63,7 @@ export default function Share() {
             width={32}
             height={32}
           />
-          <p className="text-sm">LinkedIn</p>
+          <p className=" md:text-sm text-xs">LinkedIn</p>
         </LinkedinShareButton>
       </div>
     </div>

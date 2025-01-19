@@ -46,9 +46,9 @@ export default function ComparePage() {
 
   return (
     <>
-      <main className="container mx-auto px-4 pt-24 pb-8">
+      <main className="container mx-auto px-4 pt-32 pb-8">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Compare Movies</h1>
+          <h1 className="md:text-3xl text-2xl font-bold">Compare Movies</h1>
           <AddMovieButton onAdd={addMovieHandler} />
         </div>
 

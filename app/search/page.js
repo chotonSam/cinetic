@@ -28,7 +28,7 @@ export default function SearchPage() {
   console.log(searchData);
 
   return (
-    <main className="container mx-auto px-4 pt-24 pb-8">
+    <main className="container mx-auto px-4 pt-32 pb-8">
       {/* <!-- Search Stats --> */}
       <div className="mb-6">
         <h1 className="text-2xl font-bold">
@@ -38,7 +38,7 @@ export default function SearchPage() {
       </div>
 
       {/* <!-- Filters and Sort Section --> */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {/* <!-- Movie Card 1 --> */}
         {searchData.map((movie) => (
           <SearchMovieCard movie={movie} key={movie.id} />
