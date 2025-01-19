@@ -5,6 +5,7 @@ import { FaSearchMinus, FaSearchPlus } from "react-icons/fa";
 import Search from "./Search";
 import Logo from "./menu/Logo";
 import MenuModal from "./menu/MenuModal";
+import SignInOut from "./menu/SIgnInOut";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,9 @@ export default function Navigation() {
               >
                 Watch Later
               </Link>
+            </div>
+            <div className="hover:text-gray-300">
+              <SignInOut />
             </div>
           </div>
           <Search />

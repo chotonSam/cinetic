@@ -4,6 +4,7 @@ import { useState } from "react";
 import { TiThMenuOutline } from "react-icons/ti";
 
 import { FaWindowClose } from "react-icons/fa";
+import SignInOut from "./SIgnInOut";
 
 export default function MenuModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,9 @@ export default function MenuModal() {
               >
                 Watch Later
               </Link>
+              <div className="block text-sm font-medium text-white hover:text-gray-300 hover:bg-gray-800 hover:scale-105 transform transition-all duration-200 px-4 py-2 rounded">
+                <SignInOut />
+              </div>
             </nav>
           </div>
         </div>

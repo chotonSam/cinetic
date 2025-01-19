@@ -46,7 +46,9 @@ export default function CompireCard({ single, onClose, openModal }) {
             width={150}
             height={300}
           />
-          <h2 className="text-xl font-bold mb-2 text-center">{single.name}</h2>
+          <h2 className="md:text-xl text-lg font-bold mb-2 text-center">
+            {single.name}
+          </h2>
         </div>
         <div className="w-full space-y-4 col-span-3">
           <div className="bg-zinc-800 p-3 rounded">
@@ -82,17 +84,18 @@ export default function CompireCard({ single, onClose, openModal }) {
               {getGenreNames(single.genres).map((genre, index) => (
                 <span
                   key={index}
-                  className="bg-zinc-700 px-2 py-1 rounded-full text-sm"
+                  className="bg-zinc-700 px-2 py-1 rounded-full md:text-sm text-xs"
                 >
                   {genre}
                 </span>
               ))}
             </div>
           </div>
-          <div className="bg-zinc-800 p-3 rounded md:block hidden ">
-            <h2 className="text-xl font-bold">Overview</h2>
-            <span className="text-sm">{single.overview}</span>
-          </div>
+        </div>
+
+        <div className="bg-zinc-800 p-3 rounded col-span-5 ">
+          <h2 className="md:text-xl text-lg font-bold">Overview</h2>
+          <span className="text-sm">{single.overview}</span>
         </div>
       </div>
     </div>
