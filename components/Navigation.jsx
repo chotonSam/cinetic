@@ -49,7 +49,7 @@ export default function Navigation() {
           <Logo />
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-lg text-white rounded-md hover:bg-gray-700"
+            className="p-2 text-xl text-white rounded-md hover:bg-gray-700"
           >
             {isOpen ? <FaSearchMinus /> : <FaSearchPlus />}
           </button>

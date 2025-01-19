@@ -12,7 +12,7 @@ export default function MenuModal() {
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-lg text-white rounded-md hover:bg-gray-700"
+        className="p-2 text-xl text-white rounded-md hover:bg-gray-700"
       >
         {isOpen ? <FaWindowClose /> : <TiThMenuOutline />}
       </button>
@@ -44,7 +44,10 @@ export default function MenuModal() {
               >
                 Watch Later
               </Link>
-              <div className="block text-sm font-medium text-white hover:text-gray-300 hover:bg-gray-800 hover:scale-105 transform transition-all duration-200 px-4 py-2 rounded">
+              <div
+                onClick={() => setIsOpen(false)}
+                className="block text-sm font-medium text-white hover:text-gray-300 hover:bg-gray-800 hover:scale-105 transform transition-all duration-200 px-4 py-2 rounded"
+              >
                 <SignInOut />
               </div>
             </nav>
