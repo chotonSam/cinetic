@@ -11,7 +11,7 @@ export default function MenuModal() {
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2  text-white rounded-md hover:bg-gray-700"
+        className="p-2 text-lg text-white rounded-md hover:bg-gray-700"
       >
         {isOpen ? <FaWindowClose /> : <TiThMenuOutline />}
       </button>
