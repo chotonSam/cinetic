@@ -37,7 +37,7 @@ export default function CompireCard({ single, onClose, openModal }) {
           ✕
         </button>
       </div>
-      <div className="grid grid-cols-5 gap-8">
+      <div className="grid grid-cols-5 md:gap-8 gap-4">
         <div className="col-span-2 h-full">
           <Image
             src={`${single.image}`}

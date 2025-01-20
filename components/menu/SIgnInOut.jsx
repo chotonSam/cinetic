@@ -16,7 +16,7 @@ const SignInOut = () => {
   };
 
   return (
-    <div className="md:ml-5 md:text-2xl text-xl">
+    <div className="md:ml-4 md:text-2xl text-xl">
       {auth ? (
         <>
           <a className="cursor-pointer flex gap-2  " onClick={logout}>

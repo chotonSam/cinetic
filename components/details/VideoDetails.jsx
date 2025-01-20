@@ -67,7 +67,7 @@ export default async function VideoDetails({ movie, casts, similerMovies }) {
                       <Image
                         src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`}
                         alt={cast.name}
-                        className="md:w-24 md:h-24 h-20 w-20 max-w-none rounded-full object-cover mb-2"
+                        className=" h-24 w-24 max-w-none rounded-full object-cover mb-2"
                         width={100}
                         height={100}
                       />
