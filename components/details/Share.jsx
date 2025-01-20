@@ -4,6 +4,7 @@ import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
+  WhatsappShareButton,
 } from "next-share";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -16,13 +17,6 @@ export default function Share() {
       setCurrentURL(window.location.href); // Get the full URL
     }
   }, []);
-
-  const whatsappShareURL = `https://wa.me/?text=${encodeURIComponent(
-    currentURL
-  )}`;
-  const messengerShareURL = `https://www.facebook.com/dialog/send?app_id=YOUR_FACEBOOK_APP_ID&link=${encodeURIComponent(
-    currentURL
-  )}&redirect_uri=${encodeURIComponent(currentURL)}`;
 
   return (
     <div className="mb-6">
@@ -75,10 +69,10 @@ export default function Share() {
         </LinkedinShareButton>
 
         {/* WhatsApp Share Button */}
-        <a
-          href={whatsappShareURL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <WhatsappShareButton
+          url={currentURL}
+          title="Check this out!"
+          separator=" - "
           className="flex flex-col items-center text-center cursor-pointer"
         >
           <Image
@@ -89,24 +83,7 @@ export default function Share() {
             height={32}
           />
           <p className="md:text-sm text-xs">WhatsApp</p>
-        </a>
-
-        {/* Messenger Share Button */}
-        <a
-          href={messengerShareURL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center text-center cursor-pointer"
-        >
-          <Image
-            src="https://messenger.com/favicon.ico"
-            alt="Messenger"
-            className="w-8 h-8 rounded-full object-cover mb-2 mx-auto"
-            width={32}
-            height={32}
-          />
-          <p className="md:text-sm text-xs">Messenger</p>
-        </a>
+        </WhatsappShareButton>
       </div>
     </div>
   );
