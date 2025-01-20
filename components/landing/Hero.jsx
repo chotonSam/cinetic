@@ -1,16 +1,16 @@
-const { fetchMovies } = require("@/utils/fetchMovies");
+import { fetchMovies } from "@/utils/fetchMovies";
+import PlayButton from "./PlayButton"; // Import the PlayButton component
 
 export default async function Hero() {
   if (!process.env.NEXT_PUBLIC_BASE_URL) {
     return null;
   }
+
   const trendingData = await fetchMovies(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/movies/populer`
   );
 
   const firstMovie = trendingData.results[0];
-
-  console.log(firstMovie);
 
   return (
     <div>
@@ -34,15 +34,15 @@ export default async function Hero() {
           <p id="heroOverview" className="md:text-lg text-base max-w-2xl mb-4">
             {firstMovie.overview}
           </p>
-          <button className="bg-white text-black md:px-8 md:py-2 px-4 py-1 rounded-lg font-bold hover:bg-opacity-80">
-            ▶ Play
-          </button>
+
+          {/* Pass necessary data to the PlayButton Client Component */}
+          <PlayButton movieTitle={firstMovie.title} />
         </div>
       </div>
 
       {/* hero for small device  */}
       <div
-        className="relative h-screen md:hidden "
+        className="relative h-screen md:hidden"
         style={{
           backgroundImage: `url(https://image.tmdb.org/t/p/original${firstMovie.poster_path})`,
           backgroundSize: `contain`,
@@ -59,9 +59,9 @@ export default async function Hero() {
           <p id="heroOverview" className="md:text-lg text-base max-w-2xl mb-4">
             {firstMovie.overview}
           </p>
-          <button className="bg-white text-black md:px-8 md:py-2 px-4 py-1 rounded-lg font-bold hover:bg-opacity-80">
-            ▶ Play
-          </button>
+
+          {/* Pass necessary data to the PlayButton Client Component */}
+          <PlayButton movieTitle={firstMovie.title} />
         </div>
       </div>
     </div>
