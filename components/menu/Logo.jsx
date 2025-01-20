@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      className="inline-block bg-red-600 text-black  text-2xl  px-1 rounded-md border-2 border-black shadow-md hover:shadow-lg transition-shadow duration-300"
+      className="inline-block bg-red-600 text-black  text-3xl  px-1 rounded-md border-2 border-black shadow-md hover:shadow-lg transition-shadow duration-300"
       style={{ fontFamily: "Anton, sans-serif" }} // Apply the imported font here
     >
       CINETIC
