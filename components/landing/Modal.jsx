@@ -3,7 +3,7 @@ const Modal = ({ isOpen, onClose, trailerUrl, loading }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
-      <div className="relative w-full max-w-4xl md:h-[60%] h-[40%]  bg-black rounded-lg">
+      <div className="relative w-full max-w-4xl md:h-[60%] sm:h-[40%]  h-[30%]  bg-black rounded-lg">
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-white text-3xl font-bold hover:text-gray-300 focus:outline-none"
